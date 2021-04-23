@@ -40,7 +40,7 @@ app.post('/api/v1/songs', (request, response) => {
     if (!request.body[requiredParameter]) {
       response
         .status(422)
-        .send({ error: `Expected format: { name: <String>, type: <String> }. You're missing a "${requiredParameter}" property.` });
+        .send({ error: `Expected format: { lyrics: <String>, progression: <String> }. You're missing a "${requiredParameter}" property.` });
     }
   }
 
