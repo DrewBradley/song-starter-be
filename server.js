@@ -1,5 +1,4 @@
 const express = require('express');
-
 const app = express();
 const cors = require('cors');
 let bodyParser = require('body-parser')
@@ -7,7 +6,6 @@ let bodyParser = require('body-parser')
 app.set('port', process.env.PORT || 3001);
 app.use(cors());
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.locals.title = 'Song Starter BE';
